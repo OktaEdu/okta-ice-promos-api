@@ -1,27 +1,25 @@
-# ice-resource-server
-
-This Resource Server makes Ice customers happy.
+# Okta Promos API
 
 ![Ice Icon](img/IceIcon_120px.png)
 
-## Run this App
-
-### Option 1: Heroku
-
-1. Click [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-2. Login or create your Heroku account.
-3. After deployment, go to settings.
-4. Update the **ISSUER** with the OAuth Authorization Server that issues JWT token - for example, https://ice.oktapreview.com/oauth2/abcdef123456.
-4. Update the **AUDIENCE** with the API that's the intended recipient of the JWT token. In heroku, this is your app url - for example, https://ice-rs-fredericohakamine.herokuapp.com".
-
-### Option 2: In my house
+## Run this App Locally
 
 1. Install `git` and `node` in your computer.
 2. Clone this repo:
-    `$ git clone git@github.com/fhakamine/ice-resource-server.git`
+   `$ git clone <URI>`
 
 3. Install Node dependencies:
-    `npm install --no-optional`
+   `npm install`
 
-4. Run the Project:
-    `node server.js --iss "https://ice.oktapreview.com/oauth2/abcdef123456" --aud "http://localhost:5000"`
+4. Run the project:
+   - without APIAM: `npm start`
+   - with APIAM:
+     - Set up custom scopes in your AuthZ server
+     - set Issuer to your OAuth endpoint
+     - Set Audience to `http://localhost:8081`
+
+## Run on Glitch
+
+1. Remix this project
+2. Set Issuer to your OAuth endpoint
+3. Set Audience to your Glitch URL
