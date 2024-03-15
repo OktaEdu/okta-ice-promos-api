@@ -1,5 +1,7 @@
 # ice-resource-server
 
+#### Disclaimer: The following is intended for educational purposes only. Not meant for production.
+
 This Resource Server provides API endpoints for Okta Ice's Promos
 
 ![Ice Icon](img/IceIcon_120px.png)
